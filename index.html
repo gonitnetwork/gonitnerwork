@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
-<!-- Previous head content remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri</title>
     
-    <!-- All meta tags remain the same -->
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta name="keywords" content="tory, tory yulianto, penipu, pedofile, pencuri">
+    <meta name="robots" content="index, follow">
     
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta itemprop="description" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta itemprop="image" content="https://gonitnetwork.github.io/tory-yulianto/anonym.webp">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta property="og:description" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta property="og:image" content="https://gonitnetwork.github.io/tory-yulianto/anonym.webp">
+    <meta property="og:url" content="https://gonitnetwork.github.io/tory-yulianto">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta name="twitter:description" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta name="twitter:image" content="https://gonitnetwork.github.io/tory-yulianto/anonym.webp">
+    
+    <!-- Instagram Meta Tags -->
+    <meta property="instagram:title" content="Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri">
+    <meta property="instagram:image" content="https://gonitnetwork.github.io/tory-yulianto/anonym.webp">
+    
+    <!-- Yandex Meta Tags -->
+    <meta name="yandex-verification" content="your-yandex-verification-code">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gonitnetwork.github.io/tory-yulianto">
+
     <style>
-        /* Previous CSS remains the same */
         * {
             margin: 0;
             padding: 0;
@@ -35,7 +64,7 @@
 
         .container {
             width: 100%;
-            max-width: 700px;
+            max-width: 700px; /* Reduced from 900px */
             margin: 0 auto;
             position: relative;
         }
@@ -43,7 +72,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-height: 70vh;
+            max-height: 70vh; /* Reduced from 80vh */
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
@@ -62,18 +91,63 @@
             background-color: #000;
         }
 
-        /* Rest of the CSS remains the same */
+        /* Custom video controls styling */
+        video::-webkit-media-controls {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        video::-webkit-media-controls-panel {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        video::-webkit-media-controls-play-button {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+
+        /* Loading spinner */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            display: none;
+        }
+
+        video:not(:loaded) + .loading {
+            display: block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Desktop specific styles */
         @media (min-width: 1024px) {
             .container {
-                max-width: 600px;
+                max-width: 600px; /* Even smaller for desktop */
             }
             
             .video-container {
-                padding-bottom: 50%;
-                max-height: 60vh;
+                padding-bottom: 50%; /* Adjusted aspect ratio for desktop */
+                max-height: 60vh; /* Further reduced for desktop */
             }
         }
 
+        /* Tablet styles */
+        @media (max-width: 1023px) and (min-width: 769px) {
+            .container {
+                max-width: 650px;
+            }
+        }
+
+        /* Mobile styles */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -82,6 +156,16 @@
             .video-container {
                 padding-bottom: 75%;
                 max-height: 70vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            .video-container {
+                border-radius: 4px;
             }
         }
     </style>
