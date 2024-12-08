@@ -123,6 +123,23 @@
         video:not(:loaded) + .loading {
             display: block;
         }
+        
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .contact-info a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
 
         @keyframes spin {
             to { transform: rotate(360deg); }
@@ -188,6 +205,10 @@
                 Your browser does not support the video tag.
             </video>
             <div class="loading"></div>
+        </div>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:tory.yulianto93@gmail.com">tory.yulianto93@gmail.com</a></p>
+            <p>No. HP/WA: <a href="tel:+6282231189557">082231189557</a></p>
         </div>
     </div>
 
