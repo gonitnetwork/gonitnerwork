@@ -64,7 +64,7 @@
 
         .container {
             width: 100%;
-            max-width: 700px; /* Reduced from 900px */
+            max-width: 700px;
             margin: 0 auto;
             position: relative;
         }
@@ -72,7 +72,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-height: 70vh; /* Reduced from 80vh */
+            max-height: 70vh;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
@@ -91,41 +91,17 @@
             background-color: #000;
         }
 
-        /* Custom video controls styling */
-        video::-webkit-media-controls {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        video::-webkit-media-controls-panel {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        video::-webkit-media-controls-play-button {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-        }
-
-        /* Loading spinner */
-        .loading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-            display: none;
-        }
-
-        video:not(:loaded) + .loading {
-            display: block;
-        }
-        
-        .contact-info {
+        .contact-info-container {
             margin-top: 20px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.05);
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .contact-info {
             text-align: center;
             color: #fff;
             font-size: 16px;
@@ -141,49 +117,23 @@
             text-decoration: underline;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        /* Scrollbar styling for webkit browsers */
+        .contact-info-container::-webkit-scrollbar {
+            width: 6px;
         }
 
-        /* Desktop specific styles */
-        @media (min-width: 1024px) {
-            .container {
-                max-width: 600px; /* Even smaller for desktop */
-            }
-            
-            .video-container {
-                padding-bottom: 50%; /* Adjusted aspect ratio for desktop */
-                max-height: 60vh; /* Further reduced for desktop */
-            }
+        .contact-info-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
         }
 
-        /* Tablet styles */
-        @media (max-width: 1023px) and (min-width: 769px) {
-            .container {
-                max-width: 650px;
-            }
+        .contact-info-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
         }
 
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            .video-container {
-                padding-bottom: 75%;
-                max-height: 70vh;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                max-width: 100%;
-            }
-            
-            .video-container {
-                border-radius: 4px;
-            }
+        .contact-info-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
@@ -206,42 +156,27 @@
             </video>
             <div class="loading"></div>
         </div>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:tory.yulianto93@gmail.com">tory.yulianto93@gmail.com</a></p>
-            <p>No. HP/WA: <a href="tel:+6282231189557">082231189557</a></p>
-            <p>Email: tory.yulianto93@gmail.com / ada email cadangan dipemulihan</p>
-            <p>No. HP/WA: 082231189557</p>
-            <p>Facebook: @tory.yulianto.524 / @tory.yulianto.93</p>
-            <p>Twitter: @moenan_tory / @tory_moenan</p>
-            <p>Tiktok: @uwiprime</p>
-            <p>Tory Yulianto Moenandir / NIM 135120100111014 / Fisip Sosiologi Universitas Brawijaya</p>
-            <p>SMK Fraten Malang</p>
-            
+        
+        <div class="contact-info-container">
+            <div class="contact-info">
+                <p>Email: <a href="mailto:tory.yulianto93@gmail.com">tory.yulianto93@gmail.com</a></p>
+                <p>No. HP/WA: <a href="tel:+6282231189557">082231189557</a></p>
+                <p>Email: tory.yulianto93@gmail.com / ada email cadangan dipemulihan</p>
+                <p>No. HP/WA: 082231189557</p>
+                <p>Facebook: @tory.yulianto.524 / @tory.yulianto.93</p>
+                <p>Twitter: @moenan_tory / @tory_moenan</p>
+                <p>Tiktok: @uwiprime</p>
+                <p>Tory Yulianto Moenandir / NIM 135120100111014 / Fisip Sosiologi Universitas Brawijaya</p>
+                <p>SMK Fraten Malang</p>
+            </div>
         </div>
     </div>
 
-    <!-- Schema.org markup remains the same -->
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "VideoObject",
-        "name": "Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri",
-        "description": "Tory Yulianto, ini pesan kami untukmu anak tidak tahu diri",
-        "thumbnailUrl": "https://gonitnetwork.github.io/anonym.webp",
-        "uploadDate": "2024-12-08",
-        "contentUrl": "https://gonitnetwork.github.io/Tory.mp4",
-        "embedUrl": "https://gonitnetwork.github.io/Tory.mp4",
-        "duration": "PT00H00M",
-        "interactionCount": "0"
-    }
-    </script>
-
     <script>
-        // Handle video loading and autoplay
+        // Previous script remains the same
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.querySelector('video');
             
-            // Handle loading spinner
             video.addEventListener('loadstart', function() {
                 this.nextElementSibling.style.display = 'block';
             });
@@ -250,7 +185,6 @@
                 this.nextElementSibling.style.display = 'none';
             });
 
-            // Force autoplay even if browser blocks it initially
             video.play().catch(function(error) {
                 console.log("Auto-play was prevented:", error);
             });
